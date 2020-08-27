@@ -9,6 +9,10 @@ id: upload-and-download
 
 There are several ways to interact with the API to upload and download a file. In this tutorial, we will show you how to do it, using the command-line and via your browser.
 
+:::danger
+Data uploaded to the swarm is publically available. Sensitive files must be [encrypted](docs/tutorial/upload-with-encryption) to ensure their contents remain private.
+:::
+
 ## Upload via command-line
 A file can be uploaded by making an HTTP POST request to the `files` endpoint. We can use `curl` to do this, like this one:
 
@@ -32,6 +36,10 @@ In both cases, the `bee/files` endpoint will return a `json` formatted response 
 ```
 
 The reference is the Swarm hash of the content which you just uploaded. Because of the properties of the [hashing function](https://en.wikipedia.org/wiki/Hash_function), it differs for each distinct file which you upload.
+
+:::info
+If you are uploading a bigger file you might want to track the status of your upload into the network. Head over to the advanced usage section to learn how to [follow the status of your upload](/advanced/)
+:::
 
 ## Download via command-line
 Similarly to upload, we can use `curl` in the command-line to download a file. We make a GET request to the same `files` endpoint to download the file which we just uploaded:

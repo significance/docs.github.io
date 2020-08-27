@@ -1,9 +1,11 @@
 ---
-title: Bee Developers
-id: bee-developers
+title: Useful Info
+id: useful-info
 ---
 
-Installation from source is described in the [Installation]("/bee-docs/installation.html").
+Welcome! We love PR's! Please get involved with our [Github repo]("https://github.com/ethersphere/bee").
+
+Installation from source is described in the [Installation]("/docs/installation.html").
 
 # Testing a connection with PingPong protocol
 

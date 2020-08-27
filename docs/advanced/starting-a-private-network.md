@@ -1,10 +1,9 @@
 ---
-title: Starting a Network
-id: starting-a-network
+title: Starting a Test Network
+id: starting-a-test-network
 ---
 
-# Starting a private network
-A private network can be started by overriding the default configuration values of your Swarm node. We will first talk about how to start a private network on your own computer and will speak afterwards about how you can invite your friends to join this network. Throughout this tutorial, we will make use of configuration files to configure the nodes, but of course you can do the same with flags or environment variables (see [Starting your node](/bee-docs/start.html)). 
+A test network can be started by overriding the default configuration values of your Swarm node. We will first talk about how to start a test network on your own computer and will speak afterwards about how you can invite your friends to join this network. Throughout this tutorial, we will make use of configuration files to configure the nodes, but of course you can do the same with flags or environment variables (see [Starting your node](/bee-docs/start.html)). 
 
 ## Start a network on your own computer
 ### Configuration

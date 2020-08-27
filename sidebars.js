@@ -2,22 +2,35 @@ module.exports = {
   someSidebar: {
     "Welcome!": ['introduction'],
     "Installation": [
-        'installation/simple-node'
+        'installation/quick-start',
+        'installation/configuration',
+        'installation/build-from-source',
+        'installation/docker'
     ],
     "Get Started": [
-        'tutorial/start-your-node',
-        'tutorial/starting-a-network',
-        'tutorial/upload-and-download',
-        'tutorial/store-with-encryption',
-        'tutorial/host-a-website',
-        'tutorial/tags',
-        'tutorial/host-a-website'
+        'get-started/start-your-node',
+        'get-started/working-with-your-node',
+        'get-started/upload-and-download',
+        'get-started/upload-a-directory',
+        // 'get-started/host-your-website-using-ENS',
+        // 'get-started/keep-your-data-available',
+        'get-started/store-with-encryption'
     ],
-    "DApps on Swarm": [
+    "Advanced Usage": [
+        'advanced/tags',
+        'advanced/resolving-ens-names',
+        // 'advanced/pinning',
+        'advanced/starting-a-test-network',
+        // 'advanced/bandwidth-incentives',
+    ],
+    "API Reference": [
         'api-reference/api-reference'
     ],
     "Bee Developers": [
         'bee-developers/bee-developers'
-    ]
+    ],
+    // "Community": [
+    //     'community/community'
+    // ]
   },
 };
