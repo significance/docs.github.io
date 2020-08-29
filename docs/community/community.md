@@ -1,6 +1,6 @@
 ---
 title: Community
-id: communityr
+id: community
 ---
 
 

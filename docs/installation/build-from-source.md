@@ -3,7 +3,9 @@ title: Build from Source
 id: build-from-source
 ---
 
-Bee is written using the Go language. You may build the software directly from the [source](https://github.com/ethersphere/bee).
+Bee is written using the [Go](https://golang.org) language. 
+
+You may build the software directly from the [source](https://github.com/ethersphere/bee).
 
 Prerequisites for installing Bee from source are:
 
@@ -24,22 +26,25 @@ cd bee
 git describe --tags
 ```
 
-3) Checkout the latest release:
+3) Checkout the required release:
 
 ```sh
-git checkout <name_of_latest_tag>
+git checkout master
 ```
 
-4) Build the binary and move the binary to a directory in your `$PATH`:
+4) Build the binary:
 
 ```sh
 make binary
-cp dist/bee /usr/local/bin/bee
 ```
 
-5) You check you are able to run the `bee` command, which you can verify by running:
+5) Check you are able to run the `bee` command. Success can be verified by running:
 ```sh
-bee version
+dist/bee version
+> 0.2.0
 ```
 
-This will now return the version number for the Bee client you are running.
+6) (optional) Additionally, you may also like to move the Bee binary to somewhere in your `$PATH`
+```sh
+sudo cp dist/bee /usr/local/bin/bee
+```

@@ -1,5 +1,5 @@
 ---
-title: Follow the status of your upload
+title: Track Upload Status
 id: tags
 ---
 
@@ -9,50 +9,51 @@ In Swarm, an instruction to upload data to the network goes through 3 consecutiv
 - Storing
 - Sending
 
-In the splitting state, the file is deconstructed in *chunks* (Swarms canonical data unit) and packaged in a [*Binary Merkle Tree*](https://en.wikipedia.org/wiki/Merkle_tree). After splitting, the chunks are stored in your local database, where they directly enter a queue, to be sent to the network.
+In the splitting state, the file is deconstructed in *chunks* (Swarms canonical data unit) and packaged in a [*Binary Merkle Tree*](https://en.wikipedia.org/wiki/Merkle_tree). After splitting, the chunks are stored in your local database where they enter a queue, to be sent to the network.
 
-Sending starts immediately when the first chunks are split and stored. After the chunk is sent, you node will get a receipt from the node that stores the chunk, marking the completion of the upload for that chunk. After a receipt is received for all chunks, the upload is complete.
+Sending starts immediately when the first chunks are split and stored. After the chunk is sent, your node will receive a receipt from the node that has stored the chunk, marking the completion of the upload for that chunk. After a receipt has been received for all chunks, the upload is complete.
 
 ## How to track the status of your upload
-The status of your upload can be followed by using `tags`. A `tag` is a label, given to all chunks that belong to the same upload instruction. 
+The status of your upload can be followed by using `tags`. A `tag` is a label given to all chunks that belong to the same upload instruction. 
 
 :::info
 The tag label is only known to your node. It is **not** communicated to the network, only your node will known that a set of chunks belong together.
 :::
 
-### Get the tag identifier
+### Generate the tag identifier
 To get the status of an upload, we can:
 
-1. Generate the tag before the upload and pass this tag on upload
-2. Let the Bee node generate a tag automatically
+Generate the tag before the upload and pass this tag on upload
 
-The disadvantage of the second option is that you won't be able to follow the status of your upload while it is splitting (the tag-uid is communicated only after splitting is complete). To follow the status of splitting, you must generate the tag yourself beforehand.
+:::info
+To follow the status of your upload while it is splitting you must generate the tag yourself beforehand since the tag-uid is usually communicated only after splitting is complete.
+:::
 
 Create a tag by sending a POST request to the `tag` API endpoint:
 
 ```console
 curl -s -XPOST http://localhost:8083/tags | jq .uid
-> 1620191689
+> 4074122506
 ```
 
-Pass the returned uid to your next upload in the swarm-tag-uid header:
+Use the returned UID to instruct your POST upload request to track this upload using the `Swarm-Tag-UID` header:
 
 ```console
-curl -F file=@bee.jpg -H "swarm-tag-uid: <tag-uid-here>" http://localhost:8080/files
+curl -F file=@bee.jpg -H "Swarm-Tag-UID: 4074122506" http://localhost:8080/files
 ```
 
-If you don't want to track splitting, do not include this header, and the `swarm-tag-uid` will be communicated as part of the normal upload response header.
-
 :::info
-You can view the response headers, including the swarm-tag-uid with curl by passing the `--verbose` flag with your upload instruction
+If you don't want to track the *splitting* stage, you may omit the `Swarm-Tag-UID` header, and a new tag will be automatically created and returned in the HTTP response header after splitting is complete.
+
+You can use `curl --verbose` to view the HTTP response headers such as the `Swarm-Tag-UID` header.
 :::
 
 ### Ask for the Current Status
 
-To get the status of your upload, send a GET request to the `tag/<swarm-tag-uid>` API endpoint.
+To get the current status of an upload, send a GET request to the `tag/<Swarm-Tag-UID>` API endpoint.
 
 ```console
-curl http://localhost:8080/tags/<swarm-tag-uid> | jq
+curl http://localhost:8080/tags/4074122506 | jq
 ```
 
 The response contains all the information that you need to follow the status of your file as it is synced with the network.
@@ -61,7 +62,7 @@ The response contains all the information that you need to follow the status of 
 {
   "total": 36, //the total number of chunks, 0 if the upload is still splitting
   "split": 36, //the current number of chunks which have been split and packed in the Binary Merkle Tree
-  "seen": 0, //starts incrementing if the chunk is already seen before and sent to the network
+  "seen": 0, //chunks already seen by the network
   "stored": 36, //the total number of chunks stored and queued for sending (if not seen before)
   "sent": 36, //the total number of chunks sent to the network
   "synced": 0, //the total number of receipts received

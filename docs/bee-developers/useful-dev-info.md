@@ -1,9 +1,13 @@
 ---
-title: Useful Info
-id: useful-info
+title: Useful Dev Info
+id: useful-dev-info
 ---
 
-Welcome! We love PR's! Please get involved with our [Github repo]("https://github.com/ethersphere/bee").
+Welcome! We love PR's! 🐝 Please get involved with our [Github repo]("https://github.com/ethersphere/bee").
+
+All the action can be found in our Mattermost instance, [The Beehive]("https://beehive.ethswarm.org/"). Sign up and get involved with our buzzing hive of daily dev chat.
+
+If contributing, please read the [coding guidelines](https://github.com/ethersphere/bee/blob/master/CODING.md) before you get started.
 
 Installation from source is described in the [Installation]("/docs/installation.html").
 
