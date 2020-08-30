@@ -14,7 +14,7 @@ In this example, we change the port that the Bee API runs on, enable the Debug A
 ```console
 bee start \
   --api-addr=:8888 \
-  --enable-debug-api=true \
+  --debug-api-enable=true \
   --debug-api-addr=:6666
 ```
 
