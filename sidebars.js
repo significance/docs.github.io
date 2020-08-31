@@ -15,7 +15,7 @@ module.exports = {
         // 'get-started/host-your-website-using-ENS',
         // 'get-started/keep-your-data-available',
         'getting-started/store-with-encryption'
-    ],
+   ],
     "Advanced Usage": [
         'advanced/tags',
         // 'advanced/resolving-ens-names',
