@@ -7,7 +7,7 @@ Now that you have created your Swarm wallet and your Bee node has begun to parti
 
 ### Debug API
 
-The [Debug API](/api-reference/debug-api) provides a privileged environment where you are able to interact with your Bee node to get more information about the status of your node.
+The [Debug API](/docs/api-reference/api-reference) provides a privileged environment where you are able to interact with your Bee node to get more information about the status of your node.
 
 To use the Debug API we must first configure Bee to enable it, as it is disabled by default.
 
@@ -67,4 +67,4 @@ In this example, our node is beginning to form a healthy network. We hope to see
 }
 ```
 
-Find out more about what you can do with the Debug API [here](/api-reference/debug-api).
+Find out more about what you can do with the Debug API [here](/docs/api-reference/api-reference).

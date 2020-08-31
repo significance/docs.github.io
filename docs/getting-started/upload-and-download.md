@@ -24,7 +24,7 @@ curl -F file=@bee.jpg http://localhost:8080/files
 where `bee.jpg` is the path to the file that you would like to upload.
 
 :::danger
-Data uploaded to the swarm is always public. In Swarm, sensitive files must be [encrypted](docs/tutorial/upload-with-encryption) before uploading to ensure their contents always remains private.
+Data uploaded to the swarm is always public. In Swarm, sensitive files must be [encrypted](/docs/getting-started/store-with-encryption) before uploading to ensure their contents always remains private.
 :::
 
 When succesful, a json formatted response will be returned, containing a **swarm reference** or **hash** which is the *address* of the uploaded file, for example:
@@ -37,7 +37,7 @@ Keep this *address* safe, as we'll use it to retrieve our content later on.
 In Swarm, every piece of data has a unique *address* which is a unique and reproducible cryptographic hash digest. If you upload the same file twice, you will always receive the same hash. This makes working with data in Swarm super secure!
 
 :::info
-If you are uploading a large file it is useful to track the status of your upload as it is processed into the network. Head over to the advanced usage section to learn how to [follow the status of your upload](/advanced/tags). 
+If you are uploading a large file it is useful to track the status of your upload as it is processed into the network. Head over to the advanced usage section to learn how to [follow the status of your upload](/docs/advanced/tags). 
 
 Once your file has been **completely synced with the network**, you will be able to turn off your computer and other nodes will take over to serve the data for you!
 :::
@@ -62,4 +62,4 @@ To share files with someone who isn't running a Bee node yet, simply change the 
 
 [https://gateway.ethswarm.org/files/042d4fe...2291dd4](https://gateway.ethswarm.org/files/042d4fe94b946e2cb51196a8c136b8cc335156525bf1ad7e86356c2402291dd4)
 
-If you are unable to download your file from a different Bee node, you may be experiencing connection issues, see [troubleshooting connectivity](/docs/troubleshooting/connectivitiy) for assistance.
+<!-- If you are unable to download your file from a different Bee node, you may be experiencing connection issues, see [troubleshooting connectivity](/docs/troubleshooting/connectivitiy) for assistance. -->

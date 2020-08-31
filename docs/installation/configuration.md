@@ -145,7 +145,7 @@ Chunk database capacity in chunks. A chunk is 4096 kb in size, so the total data
 
 *default* `:6060`
 
-The IP and port the [Debug API](/api-reference/debug-api) will serve http requests from. 
+The IP and port the [Debug API](/docs/api-reference/api-reference) will serve http requests from. 
 
 Ommiting the IP part of the address will cause the server to listen to all requests.
 
@@ -155,13 +155,13 @@ Ommiting the IP part of the address will cause the server to listen to all reque
 
 *default* `false`
 
-Set this to `true` to enable access to the [Debug API](/api-reference/debug-api)
+Set this to `true` to enable access to the [Debug API](/docs/api-reference/api-reference)
 
 #### --global-pinning-enable
 
 *default* `false`
 
-Enables the [Global Pinning](/something) functionality when set to `true`.
+Enables the Global Pinning functionality when set to `true`.
 
 #### --nat-address
 

@@ -54,8 +54,8 @@ Other files are served at their relative paths, e.g.
 
 [http://localhost:8080/bzz/b25c89a...214917b/assets/style.css](http://localhost:8080/bzz/b25c89a401d9f26811680476619a1eb4a4e189e614bc6161cbfd8b343214917b/assets/style.css) 
 
-Once your data has been [fully processed into the network](/docs/tutorial/tags), you will then be able to retrieve it from any Bee node!
+Once your data has been [fully processed into the network](/docs/advanced/tags), you will then be able to retrieve it from any Bee node!
 
 [https://gateway.ethswarm.org/bzz/b25c89a...214917b/index.html](https://gateway.ethswarm.org/bzz/b25c89a401d9f26811680476619a1eb4a4e189e614bc6161cbfd8b343214917b/index.html)
 
-If you are not able to download your file from a different Bee node, you may be experiencing connection issues, see [troubleshooting connectivity](/docs/troubleshooting/connectivitiy) for assistance.
+<!-- If you are not able to download your file from a different Bee node, you may be experiencing connection issues, see [troubleshooting connectivity](/docs/troubleshooting/connectivitiy) for assistance. -->
