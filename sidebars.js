@@ -18,6 +18,7 @@ module.exports = {
    ],
     "Advanced Usage": [
         'advanced/tags',
+        'advanced/persistence',
         // 'advanced/resolving-ens-names',
         // 'advanced/pinning',
         'advanced/starting-a-test-network',
