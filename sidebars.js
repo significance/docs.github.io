@@ -6,6 +6,7 @@ module.exports = {
         'installation/configuration',
         'installation/build-from-source',
         'installation/docker'
+        // 'installation/windows'
     ],
     "Getting Started": [
         'getting-started/start-your-node',
@@ -19,8 +20,6 @@ module.exports = {
     "Advanced Usage": [
         'advanced/tags',
         'advanced/persistence',
-        // 'advanced/resolving-ens-names',
-        // 'advanced/pinning',
         'advanced/starting-a-test-network',
         // 'advanced/bandwidth-incentives',
     ],

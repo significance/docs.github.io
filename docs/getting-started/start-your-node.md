@@ -39,10 +39,10 @@ If all goes well, you will see your node automatically begin to connect to other
 INFO[2020-08-29T11:55:16Z] greeting <Hi I am a very buzzy bee bzzzz bzzz bzz. 🐝> from peer: b6ae5b22d4dc93ce5ee46a9799ef5975d436eb63a4b085bfc104fcdcbda3b82c
 ```
 
-Now you node will begin to request chunks of data that fall within your *radius of responsibilty* - data that you will serve to the rest of the swarm. It will then begin to serve requests for these chunks from other peers, for which you will soon be rewarded in BZZ.
+Now your node will begin to request chunks of data that fall within your *radius of responsibilty* - data that you will then serve to other p2p clients running in the swarm. Your node will then begin to respond to requests for these chunks from other peers, for which you will soon be rewarded in BZZ.
 
 :::tip Incentivisation
-In Swarm, storing chunks of data and serving or forwarding them to other nodes earns you rewards! When you help to store and distribute data, you will be rewarded with cryptographic tokens which can then be used to retrieve interesting content in Swarm. Get ready for exciting incentivisation features coming soon at Swarm Live!
+In Swarm, storing chunks of data, serving and forwarding them to other nodes earns you rewards - get ready for exciting incentivisation features coming soon at Swarm Live!
 :::
 
 Your Bee client has now generated an elliptic curve keypair similar to an Ethereum wallet. These are stored in your [data directory](/docs/installation/configuration#--data-dir), in the `keys` folder.

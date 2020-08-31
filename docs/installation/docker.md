@@ -10,7 +10,7 @@ Bee is also provided as Docker images hosted at [Docker Hub](https://hub.docker.
 Try Bee out by simply running the following command in your Terminal. 
 
 ```sh
-docker run --rm -it ethersphere/bee\
+docker run --rm -it ethersphere/bee:alpha\
   start --welcome-message="Hi I am a very buzzy bee bzzzz bzzz bzz. 🐝"
 ```
 
@@ -19,7 +19,7 @@ To persist files mount a local directory as follows and enter the password used 
 ```sh
 docker run\
   -v /path/to/.bee-docker:/home/bee/.bee\
-  --rm -it ethersphere/bee\
+  --rm -it ethersphere/bee:alpha\
   start
 ```
 
@@ -28,16 +28,22 @@ Once you have generated your keys, leave Bee to run in the background...
 ```sh
 docker run\
   -v /path/to/.bee-docker:/home/bee/.bee\
-  -d ethersphere/bee\
+  -d ethersphere/bee:alpha\
   start\
   --welcome-message="Bzzzz bzzz bzz bzz. 🐝"
 ```
 
-Note, Docker insists on absolute paths so you must replace /path/to/.bee-docker with a valid path from your local filesystem.
+Note, Docker insists on absolute paths when mounting volumes, so you must replace `/path/to/.bee-docker` with a valid path from your local filesystem.
 
-### Other Versions
+### Versions
 
 You other versions of the Bee container are also available.
+
+#### Latest Alpha Release
+
+```sh
+docker pull ethersphere/bee:alpha
+```
 
 #### Specific Versions
 

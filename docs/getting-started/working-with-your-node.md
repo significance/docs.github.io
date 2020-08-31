@@ -9,15 +9,15 @@ Now that you have created your Swarm wallet and your Bee node has begun to parti
 
 The [Debug API](/docs/api-reference/api-reference) provides a privileged environment where you are able to interact with your Bee node to get more information about the status of your node.
 
+:::danger
+Never expose your Debug API to the public internet, make sure to use a firewall or bind to *localhost*, as we have in the example below.
+:::
+
 To use the Debug API we must first configure Bee to enable it, as it is disabled by default.
 
 ```sh
 $ bee start --debug-api-enable --debug-api-addr=localhost:6060
 ```
-
-:::info
-Here we've also specified that the Debug API should be made available on *localhost* only, for added security.
-:::
 
 #### Checking Connectivity
 

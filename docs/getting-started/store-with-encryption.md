@@ -36,5 +36,5 @@ $ curl -OJ http://localhost:8083/files/f7b1a45b70ee91d3dbfd98a2a692387f24db7279a
 ```
 
 :::danger
-Never ask public gateways for full encrypted references, they contain sensitive key information which should be kept private.
+Never use public gateways when requesting full encrypted references, the hash contains sensitive key information which should be kept private. Run [your own node](/docs/installation/quick-start) to get the use Bee's encryption features.
 :::

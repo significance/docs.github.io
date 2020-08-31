@@ -5,7 +5,7 @@ id: quick-start
 
 ## Supported platforms
 
-The client can be installed on MacOS, Windows and various Linux flavors.
+The Bee client will happily run on MacOS, Windows and various Linux flavors.
 
 ### Quick Install (Stable)
 
@@ -34,7 +34,7 @@ bee version
 
 ### Edge (Unstable)
 
-To get a sneek preview of the latest features added to Bee, you may also install the Edge version, which tracks the master branch of the [Github respository](https://github.com/ethersphere/bee)
+To get a sneak preview of the latest features added to Bee, you may also install the Edge version, which tracks the master branch of the [Github respository](https://github.com/ethersphere/bee)
 
 #### wget
 ```sh
