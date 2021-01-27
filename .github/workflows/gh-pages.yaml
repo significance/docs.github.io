@@ -21,26 +21,25 @@ jobs:
 
       - name: Setup swarm
         run: |
-          printf ${{ secrets.KEY_PASS }} > password
           mkdir -p ${HOME}/.bee/keystore
           printf ${{ secrets.LIBP2P_KEY_FILE }} > ${HOME}/.bee/keys/libp2p.key
           printf ${{ secrets.SWARM_KEY_FILE }} > ${HOME}/.bee/keys/swarm.key
           wget -q -O - https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v0.4.2 bash
-          bee &
+          bee --password="x" &
           while ! nc -vz localhost 1633; do sleep 1; done
 
-      - name: Build for gh-pages
-        run: |
-          npm install
-          npm run-script build
-          echo "docs.ethswarm.org" > ./build/CNAME
-          rm ./build/.nojekyll
+      # - name: Build for gh-pages
+      #   run: |
+      #     npm install
+      #     npm run-script build
+      #     echo "docs.ethswarm.org" > ./build/CNAME
+      #     rm ./build/.nojekyll
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+      # - name: Deploy to gh-pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./build
 
       - name: Build for swarm
         run: |
