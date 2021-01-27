@@ -21,7 +21,7 @@ jobs:
 
       - name: Setup swarm
         run: |
-          mkdir -p ${HOME}/.bee/keystore
+          mkdir -p ${HOME}/.bee/keys
           printf ${{ secrets.LIBP2P_KEY_FILE }} > ${HOME}/.bee/keys/libp2p.key
           printf ${{ secrets.SWARM_KEY_FILE }} > ${HOME}/.bee/keys/swarm.key
           wget -q -O - https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v0.4.2 bash
